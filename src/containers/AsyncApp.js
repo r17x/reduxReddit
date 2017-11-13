@@ -35,9 +35,9 @@ class AsyncApp extends Component {
 
     handleRefreshClick(e){
         e.preventDefault();
-        const { dispatch, selectSubreddit } = this.props;
-        dispatch(invalidateSubreddit(selectSubreddit));
-        dispatch(fetchPostsIfNeeded(selectSubreddit));
+        const { dispatch, selectedSubreddit } = this.props;
+        dispatch(invalidateSubreddit(selectedSubreddit));
+        dispatch(fetchPostsIfNeeded(selectedSubreddit));
     }
 
     render(){
